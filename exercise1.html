@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>DOM Manipulation Exercise</title>
+    <title>Lab5 - Exercise 1</title>
 </head>
 <body>
-    <input type="text" id="textbox" placeholder="Type something here...">
+    <input type="text" id="textInput" placeholder="Type something here..."/>
     <label id="label">ENSF381 Course</label>  
-    <button class="colorbutton" id="red">Red</button>
-    <button class="colorbutton" id="blue">Blue</button>
-    <button class="colorbutton" id="green">Green</button>
-    <button class="colorbutton" id="orange">Orange</button>
-    <button class="colorbutton" id="purple">Purple</button>
+    <button id="redButton">Red</button>
+    <button id="blueButton">Blue</button>
+    <button id="greenButton">Green</button>
+    <button id="orangeButton">Orange</button>
+    <button id="purpleButton">Purple</button>
 
-    <script>
-        const textbox = document.getElementById('textbox');
+    <script type="text/javascript">
+        const textInput = document.getElementById('textInput');
         const label = document.getElementById('label');
 
-        const redbutton = document.getElementById('red')
-        const bluebutton = document.getElementById('blue')
-        const greenbutton = document.getElementById('green')
-        const orangebutton = document.getElementById('orange')
-        const purplebutton = document.getElementById('purple')
+        const redButton = document.getElementById('redButton')
+        const blueButton = document.getElementById('blueButton')
+        const greenButton = document.getElementById('greenButton')
+        const orangeButton = document.getElementById('orangeButton')
+        const purpleButton = document.getElementById('purpleButton')
 
         textbox.addEventListener('keypress', (event) => {
             if (event.key === 'Enter') {
-                label.textContent = textbox.value;
+                label.textContent = textInput.value;
                 textbox.value = '';
             }
         });
 
         
-        redbutton.addEventListener('click', () => {
+        redButton.addEventListener('click', () => {
             label.style.color = "red";
         });
 
-        bluebutton.addEventListener('click', () => {
+        blueButton.addEventListener('click', () => {
             label.style.color = "blue";
         });
 
-        greenbutton.addEventListener('click', () => {
+        greenButton.addEventListener('click', () => {
             label.style.color = "green";
         });
 
-        orangebutton.addEventListener('click', () => {
+        orangeButton.addEventListener('click', () => {
             label.style.color = "orange";
         });
 
-        purplebutton.addEventListener('click', () => {
+        purpleButton.addEventListener('click', () => {
             label.style.color = "purple";
         });
     </script>
